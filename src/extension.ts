@@ -48,6 +48,7 @@ export const activate = (context: vscode.ExtensionContext): void => {
             // for New Line (U+000A)
             const decoLf = vscode.window.createTextEditorDecorationType({
                 before: {
+                    width: "0",
                     contentText: config.get<string>('newLine.lf', "\u2193"),
                     color: newLineColor,
                 },
@@ -57,6 +58,7 @@ export const activate = (context: vscode.ExtensionContext): void => {
             // for Carriage Return (U+000D) + New Line (U+000A)
             const decoCrLf = vscode.window.createTextEditorDecorationType({
                 before: {
+                    width: "0",
                     contentText: config.get<string>('newLine.crLf', "\u21b2"),
                     color: newLineColor,
                 },
@@ -96,7 +98,6 @@ export const activate = (context: vscode.ExtensionContext): void => {
             const decoWideSpace = vscode.window.createTextEditorDecorationType({
                 before: {
                     width: "0",
-                    // contentText: config.get<string>('wideSpace', "\u303c"),
                     contentText: config.get<string>('wideSpace', "\u2395"),
                     color: overlayColor,
                 },
@@ -122,6 +123,7 @@ export const activate = (context: vscode.ExtensionContext): void => {
             // for End of File
             const decoEof = vscode.window.createTextEditorDecorationType({
                 after: {
+                    width: "0",
                     contentText: config.get<string>('eof.text', "[EOF]"),
                     color: config.get<string>('eof.color', "rgba(128,128,128,1)"),
                 },
