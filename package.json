@@ -1,0 +1,173 @@
+{
+    "name": "visible-whitespace",
+    "icon": "assets/icon.png",
+    "displayName": "Visible Whitespace",
+    "description": "Make whitespace visible.",
+    "publisher": "yoshi389111",
+    "version": "0.0.1",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/yoshi389111/visible-whitespace"
+    },
+    "engines": {
+        "vscode": "^1.76.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "*"
+    ],
+    "main": "./dist/extension.js",
+    "contributes": {
+        "configuration": {
+            "title": "Visible Whitespace",
+            "properties": {
+                "visibleWhitespace.enabledLanguageIds": {
+                    "order": 0,
+                    "type": "array",
+                    "default": [],
+                    "description": "A list of languageIds for which this extension should be enabled. If empty, it will be enabled for all languageIds."
+                },
+                "visibleWhitespace.updateDelay": {
+                    "order": 1,
+                    "type": "number",
+                    "default": 100,
+                    "description": "Delay time in milliseconds before updating."
+                },
+                "visibleWhitespace.overlayColor": {
+                    "order": 2,
+                    "type": "string",
+                    "default": "rgba(128,128,128,1)",
+                    "description": "Color string (hex, rgba, rgb) for overlay.",
+                    "pattern": "^(#[0-9a-fA-F]{6})|(rgb\\(\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*\\))|(rgba\\(\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*[01](\\.\\d+)?\\s*\\))$",
+                    "patternErrorMessage": "Specify the color string in \"#RRGGBB\", \"rgb(R,G,B)\" or \"rgba(R,G,B,A)\" format."
+                },
+                "visibleWhitespace.htab.enable": {
+                    "order": 3,
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Enables making horizontal tabs visible."
+                },
+                "visibleWhitespace.htab.text": {
+                    "order": 4,
+                    "type": "string",
+                    "default": "\u2192",
+                    "description": "Text to overlay on horizontal tabs."
+                },
+                "visibleWhitespace.newLine.enable": {
+                    "order": 5,
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Enables making new line visible."
+                },
+                "visibleWhitespace.newLine.lf": {
+                    "order": 6,
+                    "type": "string",
+                    "default": "\u2193",
+                    "description": "Text of LF."
+                },
+                "visibleWhitespace.newLine.crLf": {
+                    "order": 7,
+                    "type": "string",
+                    "default": "\u21b2",
+                    "description": "Text of CRLF."
+                },
+                "visibleWhitespace.newLine.color": {
+                    "order": 8,
+                    "type": "string",
+                    "default": "rgba(128,128,128,1)",
+                    "description": "Color string (hex, rgba, rgb) for new line.",
+                    "pattern": "^(#[0-9a-fA-F]{6})|(rgb\\(\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*\\))|(rgba\\(\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*[01](\\.\\d+)?\\s*\\))$",
+                    "patternErrorMessage": "Specify the color string in \"#RRGGBB\", \"rgb(R,G,B)\" or \"rgba(R,G,B,A)\" format."
+                },
+                "visibleWhitespace.space.enable": {
+                    "order": 9,
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Enables making spaces visible."
+                },
+                "visibleWhitespace.space.text": {
+                    "order": 10,
+                    "type": "string",
+                    "default": "\u00b7",
+                    "description": "Text to overlay of spaces."
+                },
+                "visibleWhitespace.nbsp.enable": {
+                    "order": 11,
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Enables making no-break spaces visible."
+                },
+                "visibleWhitespace.nbsp.text": {
+                    "order": 12,
+                    "type": "string",
+                    "default": "\u2337",
+                    "description": "Text to overlay of no-break spaces."
+                },
+                "visibleWhitespace.other.enable": {
+                    "order": 13,
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Enables making other whitespaces visible."
+                },
+                "visibleWhitespace.other.borderColor": {
+                    "order": 14,
+                    "type": "string",
+                    "default": "rgba(235,97,1,1)",
+                    "description": "Border color string (hex, rgba, rgb) of other whitespaces.",
+                    "pattern": "^(#[0-9a-fA-F]{6})|(rgb\\(\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*\\))|(rgba\\(\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*[01](\\.\\d+)?\\s*\\))$",
+                    "patternErrorMessage": "Specify the color string in \"#RRGGBB\", \"rgb(R,G,B)\" or \"rgba(R,G,B,A)\" format."
+                },
+                "visibleWhitespace.eof.enable": {
+                    "order": 15,
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Enables making EOF visible."
+                },
+                "visibleWhitespace.eof.text": {
+                    "order": 16,
+                    "type": "string",
+                    "default": "[EOF]",
+                    "description": "Text of EOF."
+                },
+                "visibleWhitespace.eof.color": {
+                    "order": 17,
+                    "type": "string",
+                    "default": "rgba(128,128,128,1)",
+                    "description": "Color string (hex, rgba, rgb) for EOF.",
+                    "pattern": "^(#[0-9a-fA-F]{6})|(rgb\\(\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*\\))|(rgba\\(\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*[01](\\.\\d+)?\\s*\\))$",
+                    "patternErrorMessage": "Specify the color string in \"#RRGGBB\", \"rgb(R,G,B)\" or \"rgba(R,G,B,A)\" format."
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run package",
+        "compile": "webpack",
+        "watch": "webpack --watch",
+        "package": "webpack --mode production --devtool hidden-source-map",
+        "compile-tests": "tsc -p . --outDir out",
+        "watch-tests": "tsc -p . -w --outDir out",
+        "pretest": "npm run compile-tests && npm run compile && npm run lint",
+        "lint": "eslint src --ext ts",
+        "test": "node ./out/test/runTest.js"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.76.0",
+        "@types/glob": "^8.1.0",
+        "@types/mocha": "^10.0.1",
+        "@types/node": "16.x",
+        "@typescript-eslint/eslint-plugin": "^5.53.0",
+        "@typescript-eslint/parser": "^5.53.0",
+        "eslint": "^8.34.0",
+        "glob": "^8.1.0",
+        "mocha": "^10.2.0",
+        "typescript": "^4.9.5",
+        "ts-loader": "^9.4.2",
+        "webpack": "^5.75.0",
+        "webpack-cli": "^5.0.1",
+        "@vscode/test-electron": "^2.2.3"
+    }
+}
