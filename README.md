@@ -31,6 +31,8 @@ This extension visually displays the following whitespace characters:
 * `visibleWhitespace.space.text`: Text to overlay on spaces.
 * `visibleWhitespace.nbsp.enable`: Enables making no-break spaces visible.
 * `visibleWhitespace.nbsp.text`: Text to overlay on no-break spaces.
+* `visibleWhitespace.widespace.enable`: Enables making wide-spaces visible.
+* `visibleWhitespace.widespace.text`: Text to overlay on wide-spaces.
 * `visibleWhitespace.other.enable`: Enables making other whitespaces visible.
 * `visibleWhitespace.other.borderColor`: Border color of other whitespace.  eg. `#RRGGBB`, `rgb(R,G,B)` or `rgba(R,G,B,A)` format.
 * `visibleWhitespace.eof.enable`: Enables making EOF visible.

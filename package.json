@@ -106,14 +106,26 @@
                     "default": "\u2337",
                     "description": "Text to overlay of no-break spaces."
                 },
-                "visibleWhitespace.other.enable": {
+                "visibleWhitespace.widespace.enable": {
                     "order": 13,
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Enables making wide-spaces visible."
+                },
+                "visibleWhitespace.widespace.text": {
+                    "order": 14,
+                    "type": "string",
+                    "default": "\u2395",
+                    "description": "Text to overlay of wide-spaces."
+                },
+                "visibleWhitespace.other.enable": {
+                    "order": 15,
                     "type": "boolean",
                     "default": true,
                     "description": "Enables making other whitespaces visible."
                 },
                 "visibleWhitespace.other.borderColor": {
-                    "order": 14,
+                    "order": 16,
                     "type": "string",
                     "default": "rgba(235,97,1,1)",
                     "description": "Border color string (hex, rgba, rgb) of other whitespaces.",
@@ -121,19 +133,19 @@
                     "patternErrorMessage": "Specify the color string in \"#RRGGBB\", \"rgb(R,G,B)\" or \"rgba(R,G,B,A)\" format."
                 },
                 "visibleWhitespace.eof.enable": {
-                    "order": 15,
+                    "order": 17,
                     "type": "boolean",
                     "default": true,
                     "description": "Enables making EOF visible."
                 },
                 "visibleWhitespace.eof.text": {
-                    "order": 16,
+                    "order": 18,
                     "type": "string",
                     "default": "[EOF]",
                     "description": "Text of EOF."
                 },
                 "visibleWhitespace.eof.color": {
-                    "order": 17,
+                    "order": 19,
                     "type": "string",
                     "default": "rgba(128,128,128,1)",
                     "description": "Color string (hex, rgba, rgb) for EOF.",

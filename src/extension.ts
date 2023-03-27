@@ -93,12 +93,12 @@ export const activate = (context: vscode.ExtensionContext): void => {
             decoTypeMap.set("\u00a0", decoNoBreakSpace);
             regexParts.push("\u00a0");
         }
-        if (config.get<boolean>('nbsp.enable', true)) {
+        if (config.get<boolean>('widespace.enable', true)) {
             // for Ideographic Space (U+3000)
             const decoWideSpace = vscode.window.createTextEditorDecorationType({
                 before: {
                     width: "0",
-                    contentText: config.get<string>('wideSpace', "\u2395"),
+                    contentText: config.get<string>('widespace.text', "\u2395"),
                     color: overlayColor,
                 },
                 rangeBehavior: vscode.DecorationRangeBehavior.ClosedClosed,
