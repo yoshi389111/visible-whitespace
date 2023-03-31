@@ -4,7 +4,7 @@
     "displayName": "Visible Whitespace",
     "description": "Make whitespace visible.",
     "publisher": "yoshi389111",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "license": "MIT",
     "repository": {
         "type": "git",
@@ -17,7 +17,7 @@
         "Other"
     ],
     "activationEvents": [
-        "*"
+        "onStartupFinished"
     ],
     "main": "./dist/extension.js",
     "contributes": {
@@ -53,7 +53,7 @@
                 "visibleWhitespace.htab.text": {
                     "order": 4,
                     "type": "string",
-                    "default": "\u2192",
+                    "default": "→",
                     "description": "Text to overlay on horizontal tabs."
                 },
                 "visibleWhitespace.newLine.enable": {
@@ -65,13 +65,13 @@
                 "visibleWhitespace.newLine.lf": {
                     "order": 6,
                     "type": "string",
-                    "default": "\u2193",
+                    "default": "↓",
                     "description": "Text of LF."
                 },
                 "visibleWhitespace.newLine.crLf": {
                     "order": 7,
                     "type": "string",
-                    "default": "\u21b2",
+                    "default": "↲",
                     "description": "Text of CRLF."
                 },
                 "visibleWhitespace.newLine.color": {
@@ -91,7 +91,7 @@
                 "visibleWhitespace.space.text": {
                     "order": 10,
                     "type": "string",
-                    "default": "\u00b7",
+                    "default": "·",
                     "description": "Text to overlay of spaces."
                 },
                 "visibleWhitespace.nbsp.enable": {
@@ -103,7 +103,7 @@
                 "visibleWhitespace.nbsp.text": {
                     "order": 12,
                     "type": "string",
-                    "default": "\u2337",
+                    "default": "⌷",
                     "description": "Text to overlay of no-break spaces."
                 },
                 "visibleWhitespace.widespace.enable": {
@@ -115,7 +115,7 @@
                 "visibleWhitespace.widespace.text": {
                     "order": 14,
                     "type": "string",
-                    "default": "\u2395",
+                    "default": "⎕",
                     "description": "Text to overlay of wide-spaces."
                 },
                 "visibleWhitespace.other.enable": {

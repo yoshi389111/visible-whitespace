@@ -1,5 +1,9 @@
 # Change Log
 
+## 2023-03-31, 0.0.4 release
+
+* Changed "activationEvents" from "*" to "onStartupFinished".
+
 ## 2023-03-28, 0.0.3 release
 
 * Fixed wrong wide space config name.
