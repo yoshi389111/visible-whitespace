@@ -2,7 +2,7 @@
     "name": "visible-whitespace",
     "icon": "assets/icon.png",
     "displayName": "Visible Whitespace",
-    "description": "Make whitespace visible.",
+    "description": "%visibleWhitespace.description%",
     "publisher": "yoshi389111",
     "version": "0.0.4",
     "license": "MIT",
@@ -28,129 +28,129 @@
                     "order": 0,
                     "type": "array",
                     "default": [],
-                    "description": "A list of languageIds for which this extension should be enabled. If empty, it will be enabled for all languageIds."
+                    "description": "%visibleWhitespace.enabledLanguageIds%"
                 },
                 "visibleWhitespace.updateDelay": {
                     "order": 1,
                     "type": "number",
                     "default": 100,
-                    "description": "Delay time in milliseconds before updating."
+                    "description": "%visibleWhitespace.updateDelay%"
                 },
                 "visibleWhitespace.overlayColor": {
                     "order": 2,
                     "type": "string",
                     "default": "rgba(128,128,128,1)",
-                    "description": "Color string (hex, rgba, rgb) for overlay.",
+                    "description": "%visibleWhitespace.overlayColor%",
                     "pattern": "^(#[0-9a-fA-F]{6})|(rgb\\(\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*\\))|(rgba\\(\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*[01](\\.\\d+)?\\s*\\))$",
-                    "patternErrorMessage": "Specify the color string in \"#RRGGBB\", \"rgb(R,G,B)\" or \"rgba(R,G,B,A)\" format."
+                    "patternErrorMessage": "%visibleWhitespace.regexp.patternErrorMessage%"
                 },
                 "visibleWhitespace.htab.enable": {
                     "order": 3,
                     "type": "boolean",
                     "default": false,
-                    "description": "Enables making horizontal tabs visible."
+                    "description": "%visibleWhitespace.htab.enable%"
                 },
                 "visibleWhitespace.htab.text": {
                     "order": 4,
                     "type": "string",
                     "default": "→",
-                    "description": "Text to overlay on horizontal tabs."
+                    "description": "%visibleWhitespace.htab.text%"
                 },
                 "visibleWhitespace.newLine.enable": {
                     "order": 5,
                     "type": "boolean",
                     "default": true,
-                    "description": "Enables making new line visible."
+                    "description": "%visibleWhitespace.newLine.enable%"
                 },
                 "visibleWhitespace.newLine.lf": {
                     "order": 6,
                     "type": "string",
                     "default": "↓",
-                    "description": "Text of LF."
+                    "description": "%visibleWhitespace.newLine.lf%"
                 },
                 "visibleWhitespace.newLine.crLf": {
                     "order": 7,
                     "type": "string",
                     "default": "↲",
-                    "description": "Text of CRLF."
+                    "description": "%visibleWhitespace.newLine.crLf%"
                 },
                 "visibleWhitespace.newLine.color": {
                     "order": 8,
                     "type": "string",
                     "default": "rgba(128,128,128,1)",
-                    "description": "Color string (hex, rgba, rgb) for new line.",
+                    "description": "%visibleWhitespace.newLine.color%",
                     "pattern": "^(#[0-9a-fA-F]{6})|(rgb\\(\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*\\))|(rgba\\(\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*[01](\\.\\d+)?\\s*\\))$",
-                    "patternErrorMessage": "Specify the color string in \"#RRGGBB\", \"rgb(R,G,B)\" or \"rgba(R,G,B,A)\" format."
+                    "patternErrorMessage": "%visibleWhitespace.regexp.patternErrorMessage%"
                 },
                 "visibleWhitespace.space.enable": {
                     "order": 9,
                     "type": "boolean",
                     "default": false,
-                    "description": "Enables making spaces visible."
+                    "description": "%visibleWhitespace.space.enable%"
                 },
                 "visibleWhitespace.space.text": {
                     "order": 10,
                     "type": "string",
                     "default": "·",
-                    "description": "Text to overlay of spaces."
+                    "description": "%visibleWhitespace.space.text%"
                 },
                 "visibleWhitespace.nbsp.enable": {
                     "order": 11,
                     "type": "boolean",
                     "default": true,
-                    "description": "Enables making no-break spaces visible."
+                    "description": "%visibleWhitespace.nbsp.enable%"
                 },
                 "visibleWhitespace.nbsp.text": {
                     "order": 12,
                     "type": "string",
                     "default": "⌷",
-                    "description": "Text to overlay of no-break spaces."
+                    "description": "%visibleWhitespace.nbsp.text%"
                 },
                 "visibleWhitespace.widespace.enable": {
                     "order": 13,
                     "type": "boolean",
                     "default": true,
-                    "description": "Enables making wide-spaces visible."
+                    "description": "%visibleWhitespace.widespace.enable%"
                 },
                 "visibleWhitespace.widespace.text": {
                     "order": 14,
                     "type": "string",
                     "default": "⎕",
-                    "description": "Text to overlay of wide-spaces."
+                    "description": "%visibleWhitespace.widespace.text%"
                 },
                 "visibleWhitespace.other.enable": {
                     "order": 15,
                     "type": "boolean",
                     "default": true,
-                    "description": "Enables making other whitespaces visible."
+                    "description": "%visibleWhitespace.other.enable%"
                 },
                 "visibleWhitespace.other.borderColor": {
                     "order": 16,
                     "type": "string",
                     "default": "rgba(235,97,1,1)",
-                    "description": "Border color string (hex, rgba, rgb) of other whitespaces.",
+                    "description": "%visibleWhitespace.other.borderColor%",
                     "pattern": "^(#[0-9a-fA-F]{6})|(rgb\\(\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*\\))|(rgba\\(\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*[01](\\.\\d+)?\\s*\\))$",
-                    "patternErrorMessage": "Specify the color string in \"#RRGGBB\", \"rgb(R,G,B)\" or \"rgba(R,G,B,A)\" format."
+                    "patternErrorMessage": "%visibleWhitespace.regexp.patternErrorMessage%"
                 },
                 "visibleWhitespace.eof.enable": {
                     "order": 17,
                     "type": "boolean",
                     "default": true,
-                    "description": "Enables making EOF visible."
+                    "description": "%visibleWhitespace.eof.enable%"
                 },
                 "visibleWhitespace.eof.text": {
                     "order": 18,
                     "type": "string",
                     "default": "[EOF]",
-                    "description": "Text of EOF."
+                    "description": "%visibleWhitespace.eof.text%"
                 },
                 "visibleWhitespace.eof.color": {
                     "order": 19,
                     "type": "string",
                     "default": "rgba(128,128,128,1)",
-                    "description": "Color string (hex, rgba, rgb) for EOF.",
+                    "description": "%visibleWhitespace.eof.color%",
                     "pattern": "^(#[0-9a-fA-F]{6})|(rgb\\(\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*\\))|(rgba\\(\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\s*,\\s*[01](\\.\\d+)?\\s*\\))$",
-                    "patternErrorMessage": "Specify the color string in \"#RRGGBB\", \"rgb(R,G,B)\" or \"rgba(R,G,B,A)\" format."
+                    "patternErrorMessage": "%visibleWhitespace.regexp.patternErrorMessage%"
                 }
             }
         }
