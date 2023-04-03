@@ -1,5 +1,9 @@
 # Change Log
 
+## 2023-04-04, 0.0.5 release
+
+* Add English and Japanese resources for l10n.
+
 ## 2023-03-31, 0.0.4 release
 
 * Changed "activationEvents" from "*" to "onStartupFinished".
