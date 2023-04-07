@@ -1,5 +1,9 @@
 # Change Log
 
+## 2023-04-08, 0.0.6 release
+
+* Added control for spaces render extents.
+
 ## 2023-04-04, 0.0.5 release
 
 * Add English and Japanese resources for l10n.

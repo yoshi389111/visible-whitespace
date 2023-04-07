@@ -4,7 +4,7 @@
     "displayName": "Visible Whitespace",
     "description": "%visibleWhitespace.description%",
     "publisher": "yoshi389111",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "license": "MIT",
     "repository": {
         "type": "git",
@@ -92,7 +92,11 @@
                     "order": 10,
                     "type": "string",
                     "default": "all",
-                    "enum": [ "all", "boundary", "trailing" ],
+                    "enum": [
+                        "all",
+                        "boundary",
+                        "trailing"
+                    ],
                     "description": "%visibleWhitespace.space.render%"
                 },
                 "visibleWhitespace.space.text": {
