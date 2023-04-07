@@ -78,7 +78,18 @@ export const activate = (context: vscode.ExtensionContext): void => {
                 rangeBehavior: vscode.DecorationRangeBehavior.ClosedClosed,
             });
             decoTypeMap.set("\u0020", decoSpace);
-            regexParts.push("\u0020");
+            switch (getConfig().get<string>("space.render", "all")) {
+                case "all":
+                    regexParts.push("\u0020");
+                    break;
+                case "boundary":
+                    regexParts.push("\u0020(?=[ \t]*$)");
+                    regexParts.push("(?<=^[ \t]*)\u0020");
+                    break;
+                case "trailing":
+                    regexParts.push("\u0020(?=[ \t]*$)");
+                    break;
+            }
         }
         if (config.get<boolean>('nbsp.enable', true)) {
             // for No-Break Space (U+00A0)
@@ -140,7 +151,7 @@ export const activate = (context: vscode.ExtensionContext): void => {
             (map, decoType) => map.set(decoType, []),
             new Map<vscode.TextEditorDecorationType, vscode.DecorationOptions[]>());
         const text = editor.document.getText();
-        const regex = new RegExp(regexParts.join("|"), "g");
+        const regex = new RegExp(regexParts.join("|"), "mg");
         const decoOther = decoTypeMap.get("other");
 
         Array.from(text.matchAll(regex)).forEach(match => {
@@ -158,7 +169,8 @@ export const activate = (context: vscode.ExtensionContext): void => {
             } else if (decoOther) {
                 const hoverMessage = `U+${target.codePointAt(0)?.toString(16).padStart(4, '0')}`;
                 options.get(decoOther)?.push({
-                    range, hoverMessage });
+                    range, hoverMessage
+                });
             }
         });
 

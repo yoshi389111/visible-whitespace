@@ -88,44 +88,51 @@
                     "default": false,
                     "description": "%visibleWhitespace.space.enable%"
                 },
-                "visibleWhitespace.space.text": {
+                "visibleWhitespace.space.render": {
                     "order": 10,
+                    "type": "string",
+                    "default": "all",
+                    "enum": [ "all", "boundary", "trailing" ],
+                    "description": "%visibleWhitespace.space.render%"
+                },
+                "visibleWhitespace.space.text": {
+                    "order": 11,
                     "type": "string",
                     "default": "·",
                     "description": "%visibleWhitespace.space.text%"
                 },
                 "visibleWhitespace.nbsp.enable": {
-                    "order": 11,
+                    "order": 12,
                     "type": "boolean",
                     "default": true,
                     "description": "%visibleWhitespace.nbsp.enable%"
                 },
                 "visibleWhitespace.nbsp.text": {
-                    "order": 12,
+                    "order": 13,
                     "type": "string",
                     "default": "⌷",
                     "description": "%visibleWhitespace.nbsp.text%"
                 },
                 "visibleWhitespace.widespace.enable": {
-                    "order": 13,
+                    "order": 14,
                     "type": "boolean",
                     "default": true,
                     "description": "%visibleWhitespace.widespace.enable%"
                 },
                 "visibleWhitespace.widespace.text": {
-                    "order": 14,
+                    "order": 15,
                     "type": "string",
                     "default": "⎕",
                     "description": "%visibleWhitespace.widespace.text%"
                 },
                 "visibleWhitespace.other.enable": {
-                    "order": 15,
+                    "order": 16,
                     "type": "boolean",
                     "default": true,
                     "description": "%visibleWhitespace.other.enable%"
                 },
                 "visibleWhitespace.other.borderColor": {
-                    "order": 16,
+                    "order": 17,
                     "type": "string",
                     "default": "rgba(235,97,1,1)",
                     "description": "%visibleWhitespace.other.borderColor%",
@@ -133,19 +140,19 @@
                     "patternErrorMessage": "%visibleWhitespace.regexp.patternErrorMessage%"
                 },
                 "visibleWhitespace.eof.enable": {
-                    "order": 17,
+                    "order": 18,
                     "type": "boolean",
                     "default": true,
                     "description": "%visibleWhitespace.eof.enable%"
                 },
                 "visibleWhitespace.eof.text": {
-                    "order": 18,
+                    "order": 19,
                     "type": "string",
                     "default": "[EOF]",
                     "description": "%visibleWhitespace.eof.text%"
                 },
                 "visibleWhitespace.eof.color": {
-                    "order": 19,
+                    "order": 20,
                     "type": "string",
                     "default": "rgba(128,128,128,1)",
                     "description": "%visibleWhitespace.eof.color%",

@@ -28,6 +28,7 @@ This extension visually displays the following whitespace characters:
 * `visibleWhitespace.newLine.crLf`: Text of CRLF.
 * `visibleWhitespace.newLine.color`: Color of text that represents new line.  eg. `#RRGGBB`, `rgb(R,G,B)` or `rgba(R,G,B,A)` format.
 * `visibleWhitespace.space.enable`: Enables making spaces visible. (default: false)
+* `visibleWhitespace.space.render`: Controls how the editor should render spaces. (default: "all")
 * `visibleWhitespace.space.text`: Text to overlay on spaces.
 * `visibleWhitespace.nbsp.enable`: Enables making no-break spaces visible.
 * `visibleWhitespace.nbsp.text`: Text to overlay on no-break spaces.

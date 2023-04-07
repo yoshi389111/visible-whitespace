@@ -10,6 +10,7 @@
     "visibleWhitespace.newLine.crLf": "CRLF 用のテキスト。",
     "visibleWhitespace.newLine.color": "改行用の色コード (hex, rgba, rgb)。",
     "visibleWhitespace.space.enable": "スペースの可視化。",
+    "visibleWhitespace.space.render": "可視化するスペースの範囲を制御する。",
     "visibleWhitespace.space.text": "スペースの重ね合わせ用テキスト。",
     "visibleWhitespace.nbsp.enable": "改行無しスペースの可視化。",
     "visibleWhitespace.nbsp.text": "改行無しスペースの重ね合わせ用テキスト。",

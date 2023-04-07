@@ -10,6 +10,7 @@
     "visibleWhitespace.newLine.crLf": "Text of CRLF.",
     "visibleWhitespace.newLine.color": "Color string (hex, rgba, rgb) for new line.",
     "visibleWhitespace.space.enable": "Enables making spaces visible.",
+    "visibleWhitespace.space.render": "Controls how the editor should render spaces.",
     "visibleWhitespace.space.text": "Text to overlay of spaces.",
     "visibleWhitespace.nbsp.enable": "Enables making no-break spaces visible.",
     "visibleWhitespace.nbsp.text": "Text to overlay of no-break spaces.",
