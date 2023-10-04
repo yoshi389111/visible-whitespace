@@ -65,7 +65,7 @@
                 "visibleWhitespace.newLine.lf": {
                     "order": 6,
                     "type": "string",
-                    "default": "↓",
+                    "default": "🢱",
                     "description": "%visibleWhitespace.newLine.lf%"
                 },
                 "visibleWhitespace.newLine.crLf": {
