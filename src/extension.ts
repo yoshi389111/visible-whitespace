@@ -15,7 +15,7 @@ export const activate = (context: vscode.ExtensionContext): void => {
         );
     };
 
-    const dispose = (decoType: { dispose(): any }) => {
+    const dispose = (decoType: { dispose(): void }) => {
         const index = context.subscriptions.indexOf(decoType);
         if (index !== -1) {
             context.subscriptions.splice(index, 1);
@@ -233,7 +233,7 @@ export const activate = (context: vscode.ExtensionContext): void => {
     triggerUpdateDecorations();
 
     vscode.window.onDidChangeActiveTextEditor(
-        (editor) => {
+        (_editor) => {
             triggerUpdateDecorations();
         },
         null,
